@@ -1,3 +1,17 @@
+<?xml version="1.0"?>
 <launch>
-    <node name="bno055_node" pkg="bno055_linux_driver" type="bno055_node" />
+    <node pkg="bno055_ros_driver" type="bno055_node" name="bno055_node" output="screen">
+        <!-- IMU message frame_id -->
+        <param name="frame_id" value="imu_link" />
+        <!-- I2C bno055 bus name -->
+        <param name="i2c_name" value="/dev/i2c-1" />
+        <!-- I2C bno055 adress -->
+        <param name="i2c_adress" value="41" />
+        <!-- Publishing rate (ROS loop rate) -->
+        <param name="rate" value="50" />
+        <!-- Data count for covariance calculation -->
+        <param name="max_data_count" value="1000" />
+        <!-- ROS param to store path to file wih IMU calibration settings -->
+        <param name="imu_settings_path" value="$(find bno055_ros_driver)/config/imu_settings.txt" />
+    </node>
 </launch>
