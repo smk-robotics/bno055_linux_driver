@@ -1,0 +1,12 @@
+# Accelerometer calibration settings (x y z r) 
+-22	135	29	1000
+# Magnetometer calibration settings (x y z r) 
+-32	-193	75	609
+# Gyroscope calibration settings (x y z) 
+-1	-3	0
+# Accelerometer covariance (x y z) 
+0.00109569	0.000216136	0.00106173
+# Magnetometer covariance (x y z) 
+3.97253e-06	9.11424e-08	2.8724e-05
+# Gyroscope covariance (x y z) 
+5.46363e-06	1.19185e-05	4.97388e-07
